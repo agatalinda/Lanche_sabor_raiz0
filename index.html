@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Raiz</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+    
+</head>
+<body>
+    <header>
+        <img src="imagem/Painel.jpg" alt="Painel">
+
+        </p>
+        <video src="imagem/sabor.mp4" controls autoplay loop width="500" poster="imagem/sabor.mp4" >
+        
+       
+        <!---TIve erro acho que não baixeir o vidio para colocar no site  --->
+        <source src="imagem/midia/vídio natureza.mp4" type="imagem/midia/vidio/mp4">
+        <source src="imagem/midia/vídio natureza.m4v" type="imagem/midia/vidio/mp4">
+        <source src="imagem/midia/vídio natureza.webn" type="imagem/midia/video/mp4">
+        <source src="imagem/midia/vídio natureza.ogv" type="imagem/midia/vidio/mp4">
+
+        <p>Seu navegadorN ÃO TEM COMPARTILHAMENTO COM REPRODUÇÃO DE VÍDIO.</p>
+
+        </video>
+        
+    </header>
+
+    <h1>Bem Vindo ao Sabor Raiz</h1>
+    <p>O melhor da culinária tradicional brasileira!</p>   
+
+    <form id="cadastroForm">
+    <h2>Cadastro</h2>
+    
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome" required minlength="3">
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required minlength="6">
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" pattern="\d{10,11}" placeholder="Apenas números">
+
+    <button type="submit">Cadastrar</button>
+
+    <center>
+        <a href="cardapio.html" class="btn-visitante">Entrar como visitante</a>
+    </center>
+</form>
+
+<script src="script.js"></script>
+<main>
+    <h2 id="boasVindas"></h2>
+    <!-- resto do conteúdo -->
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const nome = localStorage.getItem("usuarioNome");
+        if (nome) {
+            document.getElementById("boasVindas").textContent = "Bem-vindo, " + nome + "!";
+        } else {
+            document.getElementById("boasVindas").textContent = "Bem-vindo, visitante!";
+        }
+    });
+</script>
+
+
+
+
+   
+    
+
+
+</body>
+</html>
